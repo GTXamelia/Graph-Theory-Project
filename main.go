@@ -1,14 +1,15 @@
 package main
 
-// Imports used
+
 import (
-	".."
+	"fmt"
 )
 
-// Main function handles HTTP requests
 func main() {
 	
 	testInput := "Testing123"
 
-	test := inputSep(testInput);
+	test := inputSep(testInput)
+
+	fmt.Println(test)
 }
