@@ -27,15 +27,16 @@ func TrimSuffix(s string) string {
 func main() {
 	
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Enter query: ")
-	input, _ := reader.ReadString('\n')
-	fmt.Println("Input: ", input)
-	input = TrimSuffix(input)
 
-	input = automita.Intopost(input) // Remove ending of string
-	fmt.Println("Postfix", input)
+	fmt.Print("Enter automita: ")
+	input1, _ := reader.ReadString('\n')
+	input1 = TrimSuffix(input1)
 
-	nfa := automita.Poretonfa(input)
-	fmt.Println("NFA: ", nfa)
+	fmt.Print("Enter string: ")
+	input2, _ := reader.ReadString('\n')
+	input2 = TrimSuffix(input2)
+
+	nfa := automita.Pomatch(input1, input2)
+	fmt.Println("Match = ", nfa)
 
 }
