@@ -24,7 +24,6 @@ func TrimSuffix(s string) string {
     return s
 }
 
-
 func main() {
 	
 	reader := bufio.NewReader(os.Stdin)
