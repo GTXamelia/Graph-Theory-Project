@@ -52,13 +52,7 @@ func main() {
 	fmt.Print("Enter query: ")
 	input, _ := reader.ReadString('\n')
 	input = TrimSuffix(input)
-	
-	byteArrayBefore := []byte(input)
-	input = intopost(input)
-	fmt.Println("Input after fix: ", input)
-	byteArrayAfter := []byte(input)
-
-	fmt.Println("Byte Before: ", byteArrayBefore)
-	fmt.Println("Byte After: ", byteArrayAfter)
+	input = intopost(input) // Remove ending of string
+	fmt.Println("Input", input)
 
 }
