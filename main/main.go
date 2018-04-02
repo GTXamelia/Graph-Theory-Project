@@ -1,13 +1,11 @@
 package main
 
-
 import (
 	"fmt"
 	"os"
 	"bufio"
 	".."
 )
-
 
 // This function removed last two values from a string
 // Getting user input adds two ascii codes that mess up post fix
