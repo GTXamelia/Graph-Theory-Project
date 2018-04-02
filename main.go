@@ -5,8 +5,12 @@ import (
 	"fmt"
 )
 
-func intofix(infix string) string {
+func intopost(infix string) string {
 	pofix := []rune{}
+	s:= []rune{}
+
+
+
 
 	return string(pofix)
 }
@@ -14,7 +18,16 @@ func intofix(infix string) string {
 
 func main() {
 	
-	testintofix := intofix("test")
+	fmt.Println("Infix:		","a.b.c")
+	fmt.Println("Postfix 	",intopost("a.b.c"))
 
-	fmt.Println(testintofix)
+	fmt.Println("Infix:		","(a.(b|d))*")
+	fmt.Println("Postfix 	",intopost("(a.(b|d))*"))
+
+	fmt.Println("Infix:		","a.(b|d).c*")
+	fmt.Println("Postfix 	",intopost("a.(b|d).c*"))
+
+	fmt.Println("Infix:		","a.(b.b)+.c")
+	fmt.Println("Postfix 	",intopost("a.(b.b)+.c"))
+
 }
