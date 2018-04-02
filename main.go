@@ -6,8 +6,9 @@ import (
 )
 
 func intopost(infix string) string {
-	pofix := []rune{}
-	s:= []rune{}
+	specials := map[rune]int{'*':10, '.':9, '|':8}
+
+	pofix, s:= []rune{}, []rune{}
 
 
 
