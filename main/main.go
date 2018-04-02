@@ -30,13 +30,29 @@ type state struct {
 	edge2 *state
 }
 
+type nfa struct {
+	initial *state
+	accept  *state
+}
+
+func poretonfa(pofix string) string {
+
+
+	return pofix
+}
+
 func main() {
 	
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter query: ")
 	input, _ := reader.ReadString('\n')
+	fmt.Println("Input: ", input)
 	input = TrimSuffix(input)
+
 	input = postfix.Intopost(input) // Remove ending of string
-	fmt.Println("Result", input)
+	fmt.Println("Postfix", input)
+
+	input = poretonfa(input)
+	fmt.Println("Postfix", input)
 
 }
