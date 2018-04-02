@@ -1,9 +1,6 @@
 package automita
 
 import (
-	"fmt"
-	"os"
-	"bufio"
 )
 
 // This function removed last two values from a string
