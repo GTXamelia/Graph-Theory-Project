@@ -9,7 +9,5 @@ func main() {
 	
 	testInput := "Testing123"
 
-	test := inputSep(testInput)
-
-	fmt.Println(test)
+	fmt.Println(testInput)
 }
