@@ -38,13 +38,16 @@ func intopost(infix string) string {
 	return string(pofix)
 }
 
+// This function removed last two values from a string
+// Get
+// s before = [97 46 98 46 99 42 13 10]
+// s after  = [97 98 46 99 13 10 42 46]
 func TrimSuffix(s string) string {
     if len(s) > 0 {
 		s = s[:len(s)-2]
 	}
     return s
 }
-
 
 func main() {
 	
@@ -53,6 +56,6 @@ func main() {
 	input, _ := reader.ReadString('\n')
 	input = TrimSuffix(input)
 	input = intopost(input) // Remove ending of string
-	fmt.Println("Input", input)
+	fmt.Println("Result", input)
 
 }
