@@ -6,9 +6,9 @@ import (
 )
 
 func intofix(infix string) string {
-	postfix := ""
+	pofix := []rune{}
 
-	return postfix
+	return string(pofix)
 }
 
 
