@@ -5,9 +5,16 @@ import (
 	"fmt"
 )
 
+func intofix(infix string) string {
+	postfix := ""
+
+	return postfix
+}
+
+
 func main() {
 	
-	testInput := "Testing123"
+	testintofix := intofix("test")
 
-	fmt.Println(testInput)
+	fmt.Println(testintofix)
 }
