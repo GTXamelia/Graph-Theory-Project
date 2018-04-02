@@ -1,4 +1,4 @@
-package postfix
+package automita
 
 import (
 )
