@@ -3,6 +3,8 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"bufio"
 )
 
 func intopost(infix string) string {
@@ -36,19 +38,27 @@ func intopost(infix string) string {
 	return string(pofix)
 }
 
+func TrimSuffix(s string) string {
+    if len(s) > 0 {
+		s = s[:len(s)-2]
+	}
+    return s
+}
+
 
 func main() {
 	
-	fmt.Println("Infix:		","a.b.c*")
-	fmt.Println("Postfix 	",intopost("a.b.c*"))
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Enter query: ")
+	input, _ := reader.ReadString('\n')
+	input = TrimSuffix(input)
+	
+	byteArrayBefore := []byte(input)
+	input = intopost(input)
+	fmt.Println("Input after fix: ", input)
+	byteArrayAfter := []byte(input)
 
-	fmt.Println("Infix:		","(a.(b|d))*")
-	fmt.Println("Postfix 	",intopost("(a.(b|d))*"))
-
-	fmt.Println("Infix:		","a.(b|d).c*")
-	fmt.Println("Postfix 	",intopost("a.(b|d).c*"))
-
-	fmt.Println("Infix:		","a.(b.b)+.c")
-	fmt.Println("Postfix 	",intopost("a.(b.b)+.c"))
+	fmt.Println("Byte Before: ", byteArrayBefore)
+	fmt.Println("Byte After: ", byteArrayAfter)
 
 }
