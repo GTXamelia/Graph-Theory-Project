@@ -1,10 +1,9 @@
-package main
+package automita
 
 import (
 	"fmt"
 	"os"
 	"bufio"
-	".."
 )
 
 // This function removed last two values from a string
@@ -24,22 +23,9 @@ func TrimSuffix(s string) string {
     return s
 }
 
-func main() {
-	// Setup reader
-	reader := bufio.NewReader(os.Stdin)
+func InputSupport(s string) string{
+	
+	
 
-	// Take in regular expression
-	fmt.Print("\nEnter regular expression: ")
-	input1, _ := reader.ReadString('\n')
-	input1 = TrimSuffix(input1)
-
-	// Take in string to compare to regular expression
-	fmt.Print("Enter string: ")
-	input2, _ := reader.ReadString('\n')
-	input2 = TrimSuffix(input2)
-
-	// Send two inputs to the non-deterministic finite automaton
-	nfa := automita.Pomatch(input1, input2)
-	fmt.Println("Match = ", nfa)
-	fmt.Println("")
+	return s
 }

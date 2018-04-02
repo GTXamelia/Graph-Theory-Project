@@ -3,7 +3,6 @@ package automita
 import (
 )
 
-
 type state struct {
 	symbol rune
 	edge1 *state
@@ -13,6 +12,20 @@ type state struct {
 type nfa struct {
 	initial *state
 	accept  *state
+}
+
+func addState(l []*state, s *state, a *state) []*state {
+	l = append(l,s)
+
+	if s != a && s.symbol == 0 {
+		l = addState(l, s.edge1, a)
+
+		if s.edge2 != nil {
+			l = addState(l, s.edge2, a)
+		}
+	}
+
+	return l
 }
 
 func Poretonfa(pofix string) *nfa {
@@ -60,20 +73,6 @@ func Poretonfa(pofix string) *nfa {
 	}
 
 	return nfastack[0]
-}
-
-func addState(l []*state, s *state, a *state) []*state {
-	l = append(l,s)
-
-	if s != a && s.symbol == 0 {
-		l = addState(l, s.edge1, a)
-
-		if s.edge2 != nil {
-			l = addState(l, s.edge2, a)
-		}
-	}
-
-	return l
 }
 
 func Pomatch(po string, s string) bool {
