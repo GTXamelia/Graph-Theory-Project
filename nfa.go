@@ -72,7 +72,6 @@ func Poretonfa(pofix string) *nfa {
 			nfastack = append(nfastack, &nfa{initial: &initial, accept: &accept})
 		case '+':
 			frag := nfastack[len(nfastack)-1]
-			nfastack = nfastack[:len(nfastack)-1]
 
 			accept := state{}
 			initial := state{edge1: frag.initial, edge2: &accept}
