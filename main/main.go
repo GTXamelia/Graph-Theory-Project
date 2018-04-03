@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"bufio"
 	".."
 )
 
@@ -25,21 +23,16 @@ func TrimSuffix(s string) string {
 }
 
 func main() {
-	// Setup reader
-	reader := bufio.NewReader(os.Stdin)
 
-	// Take in regular expression
-	fmt.Print("\nEnter regular expression: ")
-	input1, _ := reader.ReadString('\n')
-	input1 = automita.TrimSuffix(input1)
+	// Get user input and send the R.E to postfix
+	fmt.Print("Enter regular expression: ")
+	var input1 = automita.GetInput()
+	fmt.Println(automita.Intopost(input1))
 	input1 = automita.Intopost(input1)
 
-	fmt.Println(automita.Intopost(input1))
-
-	// Take in string to compare to regular expression
-	fmt.Print("Enter string: ")
-	input2, _ := reader.ReadString('\n')
-	input2 = automita.TrimSuffix(input2)
+	// Get user input and store it in input2
+	fmt.Print("Enter String: ")
+	var input2 = automita.GetInput()
 
 	// Send two inputs to the non-deterministic finite automaton
 	nfa := automita.Pomatch(input1, input2)
