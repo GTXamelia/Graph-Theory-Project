@@ -32,7 +32,7 @@ func main() {
 	fmt.Print("\nEnter regular expression: ")
 	input1, _ := reader.ReadString('\n')
 	input1 = automita.TrimSuffix(input1)
-	//input1 = automita.Intopost(input1)
+	input1 = automita.Intopost(input1)
 
 	fmt.Println(automita.Intopost(input1))
 
