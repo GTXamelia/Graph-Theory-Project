@@ -34,15 +34,19 @@ func Poretonfa(pofix string) *nfa {
 	for _, r := range pofix {
 		switch r {
 		case '.':
+			// take 2 elements off stack (frag2, frag1)
 			frag2 := nfastack[len(nfastack)-1]
 			nfastack = nfastack[:len(nfastack)-1]
 			frag1 := nfastack[len(nfastack)-1]
 			nfastack = nfastack[:len(nfastack)-1]
 
+			// add frag1 to frag2
 			frag1.accept.edge1 = frag2.initial
 
+			// append frag1 and frag2 to the top of stack
 			nfastack = append(nfastack, &nfa{initial: frag1.initial, accept: frag2.accept})
 		case '|':
+			// take 2 elements off stack (frag2, frag1), same as previous
 			frag2 := nfastack[len(nfastack)-1]
 			nfastack = nfastack[:len(nfastack)-1]
 			frag1 := nfastack[len(nfastack)-1]
@@ -72,6 +76,14 @@ func Poretonfa(pofix string) *nfa {
 			frag.accept.edge1 = &initial
 
 			nfastack = append(nfastack, &nfa{initial: frag.initial, accept: &accept})
+		case '?':
+			frag := nfastack[len(nfastack)-1]
+
+			initial := state{edge1: frag.initial, edge2: frag.accept}
+
+			frag.accept.edge1 = &initial
+
+			nfastack = append(nfastack, &nfa{initial: &initial, accept: frag.accept})
 		default:
 			accept := state{}
 			initial := state{symbol: r, edge1: &accept}
