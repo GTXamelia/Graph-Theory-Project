@@ -8,6 +8,7 @@ import (
 func main() {
 
 	// Get user input and send the R.E to postfix
+	fmt.Println("")
 	fmt.Print("Enter regular expression: ")
 	var input1 = automita.GetInput()
 	fmt.Println("Postfix: ", automita.Intopost(input1))

@@ -4,7 +4,7 @@ import (
 )
 
 func Intopost(infix string) string {
-	specials := map[rune]int{'*': 10, '+': 9, '|': 5, '?': 8, '.': 6}
+	specials := map[rune]int{'*': 10, '+': 9, '?': 8, '.': 6, '|': 5,}
 
 	pofix, s:= []rune{}, []rune{}
 
