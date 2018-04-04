@@ -5,6 +5,8 @@ import (
 	".."
 	"io/ioutil"
 	"strings"
+	"strconv"
+	"github.com/fatih/color"
 )
 
 func FileReader(regExp string) string{
@@ -16,26 +18,24 @@ func FileReader(regExp string) string{
 
 	b, err := ioutil.ReadFile(fileName)
 	if err != nil {
-		return "File not found"
+		fmt.Println("File not found")
 	}
 	
 	str := string(b)
 
 	s := strings.Split(str, " ")
 
-	for i, word := range s{
-		if (automita.Pomatch(regExp, s[i]) == true){
+	for _, s := range s{
+		if (automita.Pomatch(regExp, s) == true){
 			count++
 		}
 	}
 
 	if (count > 0) {
-		
-	} else {
-		
+		return ("Expression \"" + regExp + "\" - Found: " + strconv.Itoa(count))
 	}
-
-	return "nil"
+		
+	return ("Expression \"" + regExp + "\" - Not found in file")
 }
 
 func main() {
@@ -47,9 +47,8 @@ func main() {
 	input1 = automita.ConcatAuto(input1, 1)
 	fmt.Println("Concater: ", automita.ConcatAuto(input1, 1))
 	fmt.Println("Postfix: ", automita.Intopost(input1))
+	fmt.Println(FileReader(input1))
 	input1 = automita.Intopost(input1)
-
-
 
 	// Get user input and store it in input2
 	fmt.Print("Enter String: ")
@@ -57,6 +56,6 @@ func main() {
 
 	// Send two inputs to the non-deterministic finite automaton
 	nfa := automita.Pomatch(input1, input2)
-	fmt.Println("Match = ", color.Green(nfa))
+	color.Green("Match = %b", nfa)
 	fmt.Println("")
 }
