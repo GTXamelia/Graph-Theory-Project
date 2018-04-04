@@ -5,14 +5,34 @@ import (
 	".."
 )
 
+func FileReader(regExp string) string{
+	
+	count := 0
+
+	fmt.Print("Enter name of text file: ")
+	var input = GetInput()
+
+	b, err := ioutil.ReadFile(fileName)
+
+	// Print error
+	if err != nil {
+		return "File not found"
+	}
+
+}
+
 func main() {
 
 	// Get user input and send the R.E to postfix
 	fmt.Println("")
 	fmt.Print("Enter regular expression: ")
 	var input1 = automita.GetInput()
+	input1 = automita.ConcatAuto(input1, 1)
+	fmt.Println("Concater: ", automita.ConcatAuto(input1, 1))
 	fmt.Println("Postfix: ", automita.Intopost(input1))
 	input1 = automita.Intopost(input1)
+
+
 
 	// Get user input and store it in input2
 	fmt.Print("Enter String: ")
@@ -20,6 +40,6 @@ func main() {
 
 	// Send two inputs to the non-deterministic finite automaton
 	nfa := automita.Pomatch(input1, input2)
-	fmt.Println("Match = ", nfa)
+	fmt.Println("Match = ", color.Green(nfa))
 	fmt.Println("")
 }
