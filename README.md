@@ -59,7 +59,7 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Golang](https://golang.org/) - Golang is the code used in development
-* [Visual Studio Code](https://maven.apache.org/) - A lightweight IDE which was used in development
+* [Visual Studio Code](https://code.visualstudio.com/) - A lightweight IDE which was used in development
 
 ## Authors
 
