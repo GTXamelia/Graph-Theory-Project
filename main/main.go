@@ -86,7 +86,8 @@ func main() {
 			color.Blue("Exiting...")
 			os.Exit(2)
 		} else {
-			fmt.Println("Please select a valid option")
+			fmt.Println("")
+			color.Red("Please select a valid option")
 		}
 	}
 }
