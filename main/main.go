@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	".."
+	"io/ioutil"
+	"strings"
 )
 
 func FileReader(regExp string) string{
@@ -10,15 +12,30 @@ func FileReader(regExp string) string{
 	count := 0
 
 	fmt.Print("Enter name of text file: ")
-	var input = GetInput()
+	var fileName = automita.GetInput()
 
 	b, err := ioutil.ReadFile(fileName)
-
-	// Print error
 	if err != nil {
 		return "File not found"
 	}
+	
+	str := string(b)
 
+	s := strings.Split(str, " ")
+
+	for i, word := range s{
+		if (automita.Pomatch(regExp, s[i]) == true){
+			count++
+		}
+	}
+
+	if (count > 0) {
+		
+	} else {
+		
+	}
+
+	return "nil"
 }
 
 func main() {
