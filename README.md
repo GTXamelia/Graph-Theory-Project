@@ -6,31 +6,40 @@ The project takes a regular expression and compares it to a string of text.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+## Getting Started
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+- Create blank visual studio UWP application
+- Right click on project folder
+- Git init
+- Git remote add origin https://github.com/cian2009/UWPIrishTransportTracker.git
+- Git pull origin master
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+A step by step series of examples that tell you have to get a development enviroment running
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+1.Set-up Git Repository
 
 ```
-until finished
+Git init
+Git remote add origin https://github.com/cian2009/Graph-Theory-Project-.git
+Git pull origin master
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+2.Add project to IDE
+
+```
+Open Visual Studio Code IDE
+Drag folder of git contents into Visual Studio Code
+```
+
+3.Building project
+
+```
+Open integrated terminal
+cd .\main\
+go build .\main.go
+```
 
 ## Running the tests
 
