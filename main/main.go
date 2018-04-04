@@ -15,13 +15,12 @@ func FileReader(){
 	count := 0
 	i := 0
 	
-	var text string
-	fmt.Print("Enter regular expression: ")
-	fmt.Scan(&text)
+	color.Blue("Enter regular expression: ")
+	var text = automita.GetInput()
 
 	regExp := automita.Intopost(text)
 
-	b, err := ioutil.ReadFile("../file.txt")
+	b, err := ioutil.ReadFile("file.txt")
 	if err != nil {
 		fmt.Print(err)
 	}
@@ -37,41 +36,42 @@ func FileReader(){
 	}
 
 	if (count > 0) {
-		fmt.Println("Expression \"" + regExp + "\" - Found: " + strconv.Itoa(count))
+		color.Green("Expression \"" + regExp + "\" - Found: " + strconv.Itoa(count))
 	} else {
-		fmt.Println("Expression \"" + regExp + "\" - Not found in file")
+		color.Red("Expression \"" + regExp + "\" - Not found in file")
 	}
 
 	count = 0
 	i = 0
-
 }
 
 func main() {
 	for {
-		// Get user input and send the R.E to postfix
-		fmt.Println("")
-		
-		
 		//fmt.Println("Concater: ", automita.ConcatAuto(input1, 1))
 		//fmt.Println("Postfix: ", automita.Intopost(input1))
 
-		
-
+		automita.MainMenu()
 		var menuText = automita.GetInput()
 
 		if menuText == "1"{
+
 			fmt.Println("")
-			fmt.Print("Enter regular expression: ")
+			color.Blue("Enter regular expression: ")
 			var input1 = automita.Intopost(automita.GetInput())
 
 			// Get user input and store it in input2
-			fmt.Print("Enter String: ")
+			color.Blue("Enter String: ")
 			var input2 = automita.GetInput()
 
 			// Send two inputs to the non-deterministic finite automaton
 			nfa := automita.Pomatch(input1, input2)
-			color.Green("Match = %b", nfa)
+
+			if nfa {
+				color.Green("Match = " + "True")
+			} else {
+				color.Red("Match = " + "False")
+			}
+
 			fmt.Println("")
 
 		} else if menuText == "2" {

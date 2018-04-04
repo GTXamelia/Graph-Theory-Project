@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"bytes"
 	"strings"
+	"github.com/fatih/color"
 )
 
 func ConcatAuto(s string, n int) string {
@@ -37,6 +38,10 @@ func GetInput() string {
 	return input
 }
 
-func MainMenu(){
-
+func MainMenu() {
+	fmt.Println("")
+	color.Blue("> 1. Compare regular expression to string")
+	color.Blue("> 2. Compare regular expression to .txt file")
+	color.Blue("> 3. Exit program")
+	color.Blue("Enter option: ")
 }
