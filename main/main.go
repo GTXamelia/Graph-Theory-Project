@@ -14,13 +14,17 @@ func FileReader(){
 	
 	count := 0
 	i := 0
-	
+
+	fmt.Println("")
 	color.Blue("Enter regular expression: ")
 	var text = automita.GetInput()
 
+	color.Blue("File name: ")
+	var fileName = automita.GetInput()
+
 	regExp := automita.Intopost(text)
 
-	b, err := ioutil.ReadFile("file.txt")
+	b, err := ioutil.ReadFile(fileName + ".txt")
 	if err != nil {
 		fmt.Print(err)
 	}
@@ -36,7 +40,7 @@ func FileReader(){
 	}
 
 	if (count > 0) {
-		color.Green("Expression \"" + regExp + "\" - Found: " + strconv.Itoa(count))
+		color.Green("Expression \"" + regExp + "\" - Found: " + strconv.Itoa(count) + "matches")
 	} else {
 		color.Red("Expression \"" + regExp + "\" - Not found in file")
 	}
@@ -65,6 +69,7 @@ func main() {
 
 			// Send two inputs to the non-deterministic finite automaton
 			nfa := automita.Pomatch(input1, input2)
+			fmt.Println("")
 
 			if nfa {
 				color.Green("Match = " + "True")
@@ -77,6 +82,8 @@ func main() {
 		} else if menuText == "2" {
 			FileReader()
 		} else if menuText == "3" {
+			fmt.Println("")
+			color.Blue("Exiting...")
 			os.Exit(2)
 		} else {
 			fmt.Println("Please select a valid option")
