@@ -43,6 +43,17 @@ go build .\main.go
 
 ## Running the tests (Coming Soon)
 
+### Menu Option 1 Sample
+
+<a href="https://imgur.com/8PdfLi1"><img src="https://imgur.com/8PdfLi1.png" height="75" width="450" title="Menu Option 1"/></a>
+
+### Menu Option 2 Sample
+
+<a href="https://imgur.com/xVLOB8M"><img src="https://imgur.com/xVLOB8M.png" height="75" width="450" title="Menu Option 2"/></a>
+
+### Menu Option 3 Sample
+
+<a href="https://imgur.com/A1rX3TY"><img src="https://imgur.com/A1rX3TY.png" height="75" width="450" title="Menu Option 3"/></a>
 
 ## Built With
 
