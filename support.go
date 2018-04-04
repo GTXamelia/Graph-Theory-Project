@@ -36,3 +36,7 @@ func GetInput() string {
 	fmt.Scan(&input)
 	return input
 }
+
+func MainMenu(){
+
+}
