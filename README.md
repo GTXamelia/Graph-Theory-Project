@@ -8,11 +8,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Getting Started
 
-- Create blank visual studio UWP application
 - Right click on project folder
 - Git init
 - Git remote add origin https://github.com/cian2009/UWPIrishTransportTracker.git
 - Git pull origin master
+- Import project into Visual Studio Code
 
 ### Installing
 
