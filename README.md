@@ -58,3 +58,5 @@ go build .\main.go
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
+
+* **[StackOverflow](https://stackoverflow.com/)** - Used for light problem solving
