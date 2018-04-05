@@ -45,19 +45,25 @@ go build .\main.go
 
 ### Menu Option 1 Sample
 
-<a href="https://imgur.com/8PdfLi1"><img src="https://imgur.com/8PdfLi1.png" title="Menu Option 1"/></a>
+<a href="https://imgur.com/M1l0RBF"><img src="https://imgur.com/M1l0RBF.png" title="Menu Option 1 True"/></a>
+
+<a href="https://imgur.com/GhiE2BG"><img src="https://imgur.com/GhiE2BG.png" title="Menu Option 1 False"/></a>
 
 ### Menu Option 2 Sample
 
-<a href="https://imgur.com/xVLOB8M"><img src="https://imgur.com/xVLOB8M.png" title="Menu Option 2"/></a>
+<a href="https://imgur.com/pRJ1YgV"><img src="https://imgur.com/pRJ1YgV.png" title="Menu Option 2 True"/></a>
+
+<a href="https://imgur.com/9K5DtcW"><img src="https://imgur.com/9K5DtcW.png" title="Menu Option 2 False"/></a>
+
+<a href="https://imgur.com/rXYuoFD"><img src="https://imgur.com/rXYuoFD.png" title="Menu Option 2 No File"/></a>
 
 ### Menu Option 3 Sample
 
-<a href="https://imgur.com/A1rX3TY"><img src="https://imgur.com/A1rX3TY.png" title="Menu Option 3"/></a>
+<a href="https://imgur.com/HNmqD5v"><img src="https://imgur.com/HNmqD5v.png" title="Menu Option 3"/></a>
 
 ### Invalid Menu Option
 
-<a href="https://imgur.com/Kpo5ses"><img src="https://imgur.com/Kpo5ses.png" title="Menu Option Fail"/></a>
+<a href="https://imgur.com/o9z8zlW"><img src="https://imgur.com/o9z8zlW.png" title="Menu Option Fail"/></a>
 
 ## Built With
 
