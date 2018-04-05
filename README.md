@@ -110,3 +110,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 * **[StackOverflow](https://stackoverflow.com/)** - Used for light problem solving
+* **[Table Of Contents Generator](https://ecotrust-canada.github.io/markdown-toc/)** - Used for auto generate the table of contents
