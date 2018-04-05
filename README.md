@@ -41,7 +41,7 @@ cd .\main\
 go build .\main.go
 ```
 
-## Running the tests
+## Test Cases
 
 ### Menu Option 1 Sample
 
@@ -64,10 +64,12 @@ If the user enters the name of a file which doesn't exsist. </br>
 
 ### Menu Option 3 Sample
 
+If the user enters enters '3' to exit the program. </br>
 <a href="https://imgur.com/HNmqD5v"><img src="https://imgur.com/HNmqD5v.png" title="Menu Option 3"/></a>
 
 ### Invalid Menu Option
 
+If the user doesn't enter one of the valid option. </br>
 <a href="https://imgur.com/o9z8zlW"><img src="https://imgur.com/o9z8zlW.png" title="Menu Option Fail"/></a>
 
 ## Built With
