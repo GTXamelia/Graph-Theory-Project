@@ -1,8 +1,13 @@
 # Graph Theory Project
 
+The project takes a regular expression and compares it to a string of text.
+
+## Table Of Contents
+
 - [Graph Theory Project](#graph-theory-project)
+
+  * [Table Of Contents](#table-of-contents)
   * [Getting Started](#getting-started)
-  * [Getting Started](#getting-started-1)
     + [Installing](#installing)
   * [Test Cases](#test-cases)
     + [Menu Option 1 Sample](#menu-option-1-sample)
@@ -18,12 +23,6 @@
   * [Authors](#authors)
   * [License](#license)
   * [Acknowledgments](#acknowledgments)
-
-The project takes a regular expression and compares it to a string of text.
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ## Getting Started
 
