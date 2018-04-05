@@ -1,5 +1,24 @@
 # Graph Theory Project
 
+- [Graph Theory Project](#graph-theory-project)
+  * [Getting Started](#getting-started)
+  * [Getting Started](#getting-started-1)
+    + [Installing](#installing)
+  * [Test Cases](#test-cases)
+    + [Menu Option 1 Sample](#menu-option-1-sample)
+    + [True](#true)
+    + [False](#false)
+    + [Menu Option 2 Sample](#menu-option-2-sample)
+    + [True](#true-1)
+    + [False](#false-1)
+    + [File Not Found](#file-not-found)
+    + [Menu Option 3 Sample](#menu-option-3-sample)
+    + [Invalid Menu Option](#invalid-menu-option)
+  * [Built With](#built-with)
+  * [Authors](#authors)
+  * [License](#license)
+  * [Acknowledgments](#acknowledgments)
+
 The project takes a regular expression and compares it to a string of text.
 
 ## Getting Started
