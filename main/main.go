@@ -28,8 +28,7 @@ func FileReader(){
 		fmt.Print(err)
 	}
 
-	test := automita.Remove(rawFile, 10)
-	test = automita.Remove(test, 13)
+	test := automita.Remove(rawFile)
 
 	refinedFile := strings.Split(string(test), " ")
 
@@ -37,7 +36,6 @@ func FileReader(){
 		i++
 		if (automita.Pomatch(regExp, word) == true){
 			count++
-			fmt.Println("Found: ", count)
 		}
 	}
 

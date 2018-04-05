@@ -32,16 +32,10 @@ func ConcatAuto(s string, n int) string {
 	return s1
 }
 
-func Remove(s []byte, r byte) []byte {
-	for _, k := range s {
-		for i, v := range s {
-			if v == r {
-				k--
-				s = append(s[:i], 32)
-				s = append(s[:i], s[i+1:]...)
-			}
-		}
-	}
+func Remove(s []byte) []byte {
+	
+	s = bytes.Replace([]byte(s), []byte("\r\n"), []byte(" "), -1)
+
     return s
 }
 
