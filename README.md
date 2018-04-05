@@ -55,6 +55,10 @@ go build .\main.go
 
 <a href="https://imgur.com/A1rX3TY"><img src="https://imgur.com/A1rX3TY.png" title="Menu Option 3"/></a>
 
+### Invalid Menu Option
+
+<a href="https://imgur.com/Kpo5ses"><img src="https://imgur.com/Kpo5ses.png" title="Menu Option Fail"/></a>
+
 ## Built With
 
 * [Golang](https://golang.org/) - Golang is the code used in development
