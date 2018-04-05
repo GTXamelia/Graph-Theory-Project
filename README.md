@@ -45,16 +45,21 @@ go build .\main.go
 
 ### Menu Option 1 Sample
 
+If the user enters a regular expression which matches the entered string
 <a href="https://imgur.com/M1l0RBF"><img src="https://imgur.com/M1l0RBF.png" title="Menu Option 1 True"/></a>
 
+If the user enters a regular expression which doesn't match the entered string
 <a href="https://imgur.com/GhiE2BG"><img src="https://imgur.com/GhiE2BG.png" title="Menu Option 1 False"/></a>
 
 ### Menu Option 2 Sample
 
+If the user enters a correct file name and the file contains strings which match the regular expression entered
 <a href="https://imgur.com/pRJ1YgV"><img src="https://imgur.com/pRJ1YgV.png" title="Menu Option 2 True"/></a>
 
+If the user enters a correct file name and the file doesn't contain any strings which match the regular expression entered
 <a href="https://imgur.com/9K5DtcW"><img src="https://imgur.com/9K5DtcW.png" title="Menu Option 2 False"/></a>
 
+If the user enters the name of a file which doesn't exsist
 <a href="https://imgur.com/rXYuoFD"><img src="https://imgur.com/rXYuoFD.png" title="Menu Option 2 No File"/></a>
 
 ### Menu Option 3 Sample
