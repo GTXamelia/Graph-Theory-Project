@@ -46,9 +46,11 @@ func GetInput() string {
 }
 
 func MainMenu() {
+	blueFmt := color.New(color.FgBlue)
+
 	fmt.Println("")
 	color.Blue("> 1. Compare regular expression to string")
 	color.Blue("> 2. Compare regular expression to .txt file")
 	color.Blue("> 3. Exit program")
-	color.Blue("Enter option: ")
+	blueFmt.Print("Enter option: ")
 }

@@ -11,22 +11,21 @@ import (
 )
 
 func FileReader(){
-	
+
+	blueFmt := color.New(color.FgBlue)
+
 	count := 0
 	i := 0
 
 	fmt.Println("")
-	color.Blue("Enter regular expression: ")
+	blueFmt.Print("Enter regular expression: ")
 	var text = automita.GetInput()
 	regExp := automita.Intopost(text)
 
-	color.Blue("File name: ")
+	blueFmt.Print("File name: ")
 	var fileName = automita.GetInput()
 
 	rawFile, err := ioutil.ReadFile(fileName + ".txt")
-	if err != nil {
-		fmt.Print(err)
-	}
 
 	refinedFile := strings.Split(string(automita.Remove(rawFile)), " ")
 
@@ -37,7 +36,9 @@ func FileReader(){
 		}
 	}
 
-	if (count > 0) {
+	if err != nil {
+		color.Red("File not found. Please try again")
+	} else if (count > 0) {
 		color.Green("Expression \"" + regExp + "\" - Found: " + strconv.Itoa(count) + " matches")
 	} else {
 		color.Red("Expression \"" + regExp + "\" - Not found in file")
@@ -45,6 +46,8 @@ func FileReader(){
 }
 
 func main() {
+	blueFmt := color.New(color.FgBlue)
+
 	for {
 		//fmt.Println("Concater: ", automita.ConcatAuto(input1, 1))
 		//fmt.Println("Postfix: ", automita.Intopost(input1))
@@ -55,24 +58,21 @@ func main() {
 		if menuText == "1"{
 
 			fmt.Println("")
-			color.Blue("Enter regular expression: ")
+			blueFmt.Print("Enter regular expression: ")
 			var input1 = automita.Intopost(automita.GetInput())
 
 			// Get user input and store it in input2
-			color.Blue("Enter String: ")
+			blueFmt.Print("Enter String: ")
 			var input2 = automita.GetInput()
 
 			// Send two inputs to the non-deterministic finite automaton
 			nfa := automita.Pomatch(input1, input2)
-			fmt.Println("")
 
 			if nfa {
 				color.Green("Match = " + "True")
 			} else {
 				color.Red("Match = " + "False")
 			}
-
-			fmt.Println("")
 
 		} else if menuText == "2" {
 			FileReader()
