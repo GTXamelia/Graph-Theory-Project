@@ -50,7 +50,14 @@ Open Visual Studio Code IDE
 Drag folder of git contents into Visual Studio Code
 ```
 
-3.Building project
+3.Add Color package for Go
+
+```
+Open git bash for project repository
+Enter 'go get github.com/fatih/color'
+```
+
+4.Building project
 
 ```
 Open integrated terminal
@@ -98,6 +105,7 @@ If the user doesn't enter one of the valid option. </br>
 
 * [Golang](https://golang.org/) - Golang is the code used in development
 * [Visual Studio Code](https://code.visualstudio.com/) - A lightweight IDE which was used in development
+* [Color package for Go](https://github.com/fatih/color) - Adds colour to GoLang output
 
 ## Authors
 
