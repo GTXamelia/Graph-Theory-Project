@@ -28,9 +28,7 @@ func FileReader(){
 		fmt.Print(err)
 	}
 
-	test := automita.Remove(rawFile)
-
-	refinedFile := strings.Split(string(test), " ")
+	refinedFile := strings.Split(string(automita.Remove(rawFile)), " ")
 
 	for _, word := range refinedFile{
 		i++
