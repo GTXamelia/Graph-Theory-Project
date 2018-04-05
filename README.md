@@ -45,7 +45,7 @@ go build .\main.go
 
 ### Menu Option 1 Sample
 
-If the user enters a regular expression which matches the entered string.
+If the user enters a regular expression which matches the entered string. </br>
 <a href="https://imgur.com/M1l0RBF"><img src="https://imgur.com/M1l0RBF.png" title="Menu Option 1 True"/></a>
 
 If the user enters a regular expression which doesn't match the entered string
