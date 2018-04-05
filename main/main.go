@@ -18,23 +18,26 @@ func FileReader(){
 	fmt.Println("")
 	color.Blue("Enter regular expression: ")
 	var text = automita.GetInput()
+	regExp := automita.Intopost(text)
 
 	color.Blue("File name: ")
 	var fileName = automita.GetInput()
-
-	regExp := automita.Intopost(text)
 
 	rawFile, err := ioutil.ReadFile(fileName + ".txt")
 	if err != nil {
 		fmt.Print(err)
 	}
 
-	refinedFile := strings.Split(string(rawFile), " ")
+	test := automita.Remove(rawFile, 10)
+	test = automita.Remove(test, 13)
+
+	refinedFile := strings.Split(string(test), " ")
 
 	for _, word := range refinedFile{
 		i++
 		if (automita.Pomatch(regExp, word) == true){
 			count++
+			fmt.Println("Found: ", count)
 		}
 	}
 
@@ -43,9 +46,6 @@ func FileReader(){
 	} else {
 		color.Red("Expression \"" + regExp + "\" - Not found in file")
 	}
-
-	count = 0
-	i = 0
 }
 
 func main() {

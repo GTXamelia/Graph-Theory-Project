@@ -32,6 +32,19 @@ func ConcatAuto(s string, n int) string {
 	return s1
 }
 
+func Remove(s []byte, r byte) []byte {
+	for _, k := range s {
+		for i, v := range s {
+			if v == r {
+				k--
+				s = append(s[:i], 32)
+				s = append(s[:i], s[i+1:]...)
+			}
+		}
+	}
+    return s
+}
+
 func GetInput() string {
 	var input string
 	fmt.Scan(&input)
