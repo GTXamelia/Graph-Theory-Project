@@ -81,8 +81,9 @@ func main() {
 			// Send two inputs to the non-deterministic finite automaton
 			nfa := automita.Pomatch(input1, input2)
 
+			// If nfa returns true then the user is told the string and 
 			if nfa {
-				color.Green("Match = " + "True")
+				color.Green("Match = " + "True") // 
 			} else {
 				color.Red("Match = " + "False")
 			}

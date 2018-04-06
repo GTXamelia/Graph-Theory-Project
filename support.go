@@ -7,6 +7,8 @@ import (
 	"strings"
 )
 
+// Auto concatanate a regular expression
+// This part is still under development and not complete
 func ConcatAuto(s string, n int) string {
 	var buffer bytes.Buffer
 	var n_1 = n - 1
@@ -32,19 +34,22 @@ func ConcatAuto(s string, n int) string {
 	return s1
 }
 
+// Remove new line and return so data is all on one line
 func Remove(s []byte) []byte {
 	
-	s = bytes.Replace([]byte(s), []byte("\r\n"), []byte(" "), -1)
+	s = bytes.Replace([]byte(s), []byte("\r\n"), []byte(" "), -1) // Replace '\r\n' which is return and line feed. These are replaced by ' ' 
 
-    return s
+    return s // Return byte array
 }
 
+// Returns a string which is taken in the the 'fmt.Scan'
 func GetInput() string {
 	var input string
 	fmt.Scan(&input)
 	return input
 }
 
+// ManinMenu function displays the menu options for the user
 func MainMenu() {
 	blueFmt := color.New(color.FgBlue)
 
