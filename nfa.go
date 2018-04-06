@@ -94,7 +94,6 @@ func Poretonfa(pofix string) *nfa {
 			nfastack = append(nfastack, &nfa{initial: &initial, accept: &accept})
 		}
 	}
-
 	return nfastack[0]
 }
 

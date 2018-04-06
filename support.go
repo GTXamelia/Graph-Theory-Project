@@ -51,6 +51,7 @@ func GetInput() string {
 
 // ManinMenu function displays the menu options for the user
 func MainMenu() {
+	// Color setup used for 'Print' so input is on the same line as the prompt
 	blueFmt := color.New(color.FgBlue)
 
 	fmt.Println("")
