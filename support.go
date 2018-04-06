@@ -1,10 +1,10 @@
 package automita
 
 import (
+	"github.com/fatih/color"
 	"fmt"
 	"bytes"
 	"strings"
-	"github.com/fatih/color"
 )
 
 func ConcatAuto(s string, n int) string {
