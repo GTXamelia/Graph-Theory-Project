@@ -61,6 +61,7 @@ func ConcatAuto(infix string) string {
 			// If check is true then previous character was "|"
 			if check {
 				buffer.WriteString(string(Arr[infixChar])) // Add character to buffer
+				check = false
 			}else {
 				buffer.WriteString(".") // add to buffer
 				buffer.WriteString(string(Arr[infixChar])) // Add character to buffer
@@ -69,6 +70,7 @@ func ConcatAuto(infix string) string {
 		}
 	}
 
+	fmt.Println(buffer.String())
 	return buffer.String() // Return string
 }
 
