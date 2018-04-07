@@ -6,6 +6,7 @@ import (
 	"bytes"
 )
 
+// Concatanates a regular expression before postfix
 func ConcatAuto(infix string) string {
 
 	// String variables
@@ -70,7 +71,6 @@ func ConcatAuto(infix string) string {
 		}
 	}
 
-	fmt.Println(buffer.String())
 	return buffer.String() // Return string
 }
 

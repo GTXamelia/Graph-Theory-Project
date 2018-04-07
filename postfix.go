@@ -6,6 +6,9 @@ import (
 // This function changes an infix to a postfix which can be read by the nfa
 func Intopost(infix string) string {
 
+	// Concatanate the infix to make it readable by the postfix and then the nfa
+	infix = ConcatAuto(infix)
+
 	// Map of special characters with presedence
 	specials := map[rune]int{'*': 10, '+': 9, '?': 8, '.': 7, '|': 6,}
 
