@@ -4,34 +4,59 @@ import (
 	"github.com/fatih/color"
 	"fmt"
 	"bytes"
-	"strings"
 )
 
-// Auto concatanate a regular expression
-// This part is still under development and not complete
-func ConcatAuto(s string, n int) string {
-	var buffer bytes.Buffer
-	var n_1 = n - 1
-	var l_1 = len(s) - 1
-	for i, rune := range s {
-		buffer.WriteRune(rune)
-		if i%n == n_1 && i != l_1 {
-		}
+func ConcatAuto(infix string) string {
 
-		if (rune >= 65 && rune <= 122) && (rune+1 >= 65 && rune+1 <= 122){
-			buffer.WriteRune('.')
+	var buffer bytes.Buffer
+	strArr := []rune(infix)
+	
+	for infixChar := 0; infixChar < len(infix); infixChar++ {
+
+		if infixChar ==0 {
+			buffer.WriteString(string(strArr[infixChar]))
+			continue
 		}
+		
+		if specialsCheck(string(strArr[infixChar])) {
+
+			buffer.WriteString(string(strArr[infixChar]))
+			continue
+		}
+		if !(infixChar == 0) && string(strArr[infixChar]) == "(" {
+			buffer.WriteString(".")
+			buffer.WriteString(string(strArr[infixChar]))
+			continue
+		}
+		if !(infixChar == 0) && string(strArr[infixChar-1]) == "(" {
+
+			buffer.WriteString(string(strArr[infixChar]))
+			continue
+		}
+		if string(strArr[infixChar]) == ")" {
+
+			buffer.WriteString(string(strArr[infixChar]))
+			continue
+		}
+		buffer.WriteString(".")
+		buffer.WriteString(string(strArr[infixChar]))
+
 	}
 
-	t := strings.Replace(buffer.String(), "..", ".", -1)
-	t = strings.Replace(t, "..", ".", -1)
+	fmt.Println(buffer.String())
+	return buffer.String()
+}
 
-	s1 := t
-    if last := len(s1) - 1; last >= 0 && s1[last] == '.' {
-        s1 = s1[:last]
-    }
+func specialsCheck(char string) bool {
 
-	return s1
+	specials := []string{"*", "+", "?", ".", "|"}
+
+	for spec := range specials {
+		if char == specials[spec] {
+			return true
+		}
+	}
+	return false
 }
 
 // Remove new line and return so data is all on one line

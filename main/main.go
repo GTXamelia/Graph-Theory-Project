@@ -71,7 +71,7 @@ func main() {
 			// Takes in user input and seds it to the 'Intopost' function
 			fmt.Println("")
 			blueFmt.Print("Enter regular expression: ")
-			var input1 = automita.Intopost(automita.GetInput())
+			var input1 = automita.Intopost(automita.ConcatAuto(automita.GetInput()))
 
 			// Inform the user to enter a string
 			// Get user input and store it in input2
