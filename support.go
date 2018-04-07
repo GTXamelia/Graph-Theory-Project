@@ -8,11 +8,14 @@ import (
 
 func ConcatAuto(infix string) string {
 
+	// String variables
 	var buffer bytes.Buffer
 	Arr := []rune(infix)
 
+	// Boolean used for '|' statement
 	check := false
 	
+	// Loops through string character by character
 	for infixChar := 0; infixChar < len(infix); infixChar++ {
 
 		if infixChar == 0 {
@@ -51,14 +54,12 @@ func ConcatAuto(infix string) string {
 			continue
 		}
 		if (Arr[infixChar] >= 65 && Arr[infixChar] <= 122) {
-
 			if check {
 				buffer.WriteString(string(Arr[infixChar]))
 			}else {
 				buffer.WriteString(".")
 				buffer.WriteString(string(Arr[infixChar]))
 			}
-			
 			continue
 		}
 	}
