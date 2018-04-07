@@ -9,38 +9,42 @@ import (
 func ConcatAuto(infix string) string {
 
 	var buffer bytes.Buffer
-	strArr := []rune(infix)
+	Arr := []rune(infix)
 	
 	for infixChar := 0; infixChar < len(infix); infixChar++ {
 
-		if infixChar ==0 {
-			buffer.WriteString(string(strArr[infixChar]))
+		if infixChar == 0 {
+			
+			buffer.WriteString(string(Arr[infixChar]))
 			continue
 		}
-		
-		if specialsCheck(string(strArr[infixChar])) {
+		if specialsCheck(string(Arr[infixChar])) {
 
-			buffer.WriteString(string(strArr[infixChar]))
+			buffer.WriteString(string(Arr[infixChar]))
 			continue
 		}
-		if !(infixChar == 0) && string(strArr[infixChar]) == "(" {
+		if !(infixChar == 0) && string(Arr[infixChar]) == "(" {
+
 			buffer.WriteString(".")
-			buffer.WriteString(string(strArr[infixChar]))
+			buffer.WriteString(string(Arr[infixChar]))
 			continue
 		}
-		if !(infixChar == 0) && string(strArr[infixChar-1]) == "(" {
+		if !(infixChar == 0) && string(Arr[infixChar-1]) == "(" {
 
-			buffer.WriteString(string(strArr[infixChar]))
+			buffer.WriteString(string(Arr[infixChar]))
 			continue
 		}
-		if string(strArr[infixChar]) == ")" {
+		if string(Arr[infixChar]) == ")" {
 
-			buffer.WriteString(string(strArr[infixChar]))
+			buffer.WriteString(string(Arr[infixChar]))
 			continue
 		}
-		buffer.WriteString(".")
-		buffer.WriteString(string(strArr[infixChar]))
+		if (Arr[infixChar] >= 65 && Arr[infixChar] <= 122) {
 
+			buffer.WriteString(".")
+			buffer.WriteString(string(Arr[infixChar]))
+			continue
+		}
 	}
 
 	fmt.Println(buffer.String())
@@ -51,8 +55,8 @@ func specialsCheck(char string) bool {
 
 	specials := []string{"*", "+", "?", ".", "|"}
 
-	for spec := range specials {
-		if char == specials[spec] {
+	for specialChar := range specials {
+		if char == specials[specialChar] {
 			return true
 		}
 	}
