@@ -10,6 +10,8 @@ func ConcatAuto(infix string) string {
 
 	var buffer bytes.Buffer
 	Arr := []rune(infix)
+
+	check := false
 	
 	for infixChar := 0; infixChar < len(infix); infixChar++ {
 
@@ -18,7 +20,16 @@ func ConcatAuto(infix string) string {
 			buffer.WriteString(string(Arr[infixChar]))
 			continue
 		}
+		if string(Arr[infixChar]) == "." {	
+			continue
+		}
 		if specialsCheck(string(Arr[infixChar])) {
+
+			if !(string(Arr[infixChar]) == "|") {
+				check = false
+			}else{
+				check = true
+			}
 
 			buffer.WriteString(string(Arr[infixChar]))
 			continue
@@ -41,8 +52,13 @@ func ConcatAuto(infix string) string {
 		}
 		if (Arr[infixChar] >= 65 && Arr[infixChar] <= 122) {
 
-			buffer.WriteString(".")
-			buffer.WriteString(string(Arr[infixChar]))
+			if check {
+				buffer.WriteString(string(Arr[infixChar]))
+			}else {
+				buffer.WriteString(".")
+				buffer.WriteString(string(Arr[infixChar]))
+			}
+			
 			continue
 		}
 	}
