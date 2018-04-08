@@ -48,9 +48,9 @@ func FileReader(){
 	if err != nil {
 		color.Red("File not found. Please try again") // Red text tells the user that a file was not found
 	} else if (count > 0) {
-		color.Green("Expression \"" + regExp + "\" - Found: " + strconv.Itoa(count) + " matches") // Green text tells the user a match was found
+		color.Green("Expression \"" + text + "\" - Found: " + strconv.Itoa(count) + " matches") // Green text tells the user a match was found
 	} else {
-		color.Red("Expression \"" + regExp + "\" - Not found in file") // Red text tells the user 
+		color.Red("Expression \"" + text + "\" - Not found in file") // Red text tells the user 
 	}
 }
 
