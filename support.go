@@ -25,7 +25,7 @@ func ConcatAuto(infix string) string {
 			buffer.WriteString(string(Arr[infixChar])) // add character to buffer
 
 		}else if string(Arr[infixChar]) == "." {	
-			
+			// Do nothing
 		}else if specialsCheck(string(Arr[infixChar])) {
 
 			// If character == "|" then check is true this is used later to concatanate or not
