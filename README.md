@@ -9,6 +9,8 @@ The project takes a regular expression and compares it to a string of text.
   * [Getting Started](#getting-started)
     + [Installing](#installing)
   * [Test Cases](#test-cases)
+    + [True Test Cases](#true-test-cases)
+    + [False Test Cases](#false-test-cases)
     + [Menu Option 1 Sample](#menu-option-1-sample)
       - [True](#true)
       - [False](#false)
