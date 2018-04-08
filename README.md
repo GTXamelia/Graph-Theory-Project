@@ -1,4 +1,4 @@
-<a href="https://imgur.com/hEruUSM"><img src="https://imgur.com/hEruUSM.png" height="100" width="750" title="NFA Project Header"/></a>
+<a href="https://imgur.com/hEruUSM"><img src="https://imgur.com/hEruUSM.png" height="125" width="750" title="NFA Project Header"/></a>
 
 
 The project takes a regular expression and compares it to a string of text.
