@@ -57,18 +57,16 @@ func ConcatAuto(infix string) string {
 			buffer.WriteString(string(Arr[infixChar])) // add character to buffer
 			continue // Continue to next loop iteration
 		}
-		// If character is a letter (Using ASCII values between/and 65 and 122)
-		if (Arr[infixChar] >= 65 && Arr[infixChar] <= 122) {
-			// If check is true then previous character was "|"
-			if check {
-				buffer.WriteString(string(Arr[infixChar])) // Add character to buffer
-				check = false
-			}else {
-				buffer.WriteString(".") // add to buffer
-				buffer.WriteString(string(Arr[infixChar])) // Add character to buffer
-			}
-			continue // Continue to next loop iteration
+
+		// If check is true then previous character was "|"
+		if check {
+			buffer.WriteString(string(Arr[infixChar])) // Add character to buffer
+			check = false
+		}else {
+			buffer.WriteString(".") // add to buffer
+			buffer.WriteString(string(Arr[infixChar])) // Add character to buffer
 		}
+		continue // Continue to next loop iteration
 	}
 
 	return buffer.String() // Return string
