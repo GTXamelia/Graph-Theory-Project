@@ -6,6 +6,7 @@ The project takes a regular expression and compares it to a string of text.
 
 - [Graph Theory Project](#graph-theory-project)
   * [Table Of Contents](#table-of-contents)
+  * [Features](#features)
   * [Getting Started](#getting-started)
     + [Installing](#installing)
   * [Test Cases](#test-cases)
