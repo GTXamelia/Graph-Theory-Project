@@ -1,6 +1,7 @@
-# Graph Theory Project
+<a href="https://imgur.com/hEruUSM"><img src="https://imgur.com/hEruUSM.png" height="125" width="750" title="NFA Project Header"/></a>
 
-The project takes a regular expression and compares it to a string of text.
+
+The project takes a regular expression and evaluated it to a string of text in GoLang.
 
 ## Table Of Contents
 
@@ -173,6 +174,6 @@ If the user doesn't enter one of the valid option. </br>
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
-
+* **[Dr Ian McLoughlin](https://github.com/ianmcloughlin)**
 * **[StackOverflow](https://stackoverflow.com/)** - Used for light problem solving
 * **[Table Of Contents Generator](https://ecotrust-canada.github.io/markdown-toc/)** - Used for auto generate the table of contents
