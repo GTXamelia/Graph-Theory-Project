@@ -103,7 +103,7 @@ go build .\main.go
 
 ### True Test Cases
 
-String:                    |  Regular Exp.:            | Status:
+String:                    |  Regular Expression:      | Status:
 :-------------------------:|:-------------------------:|:-------------------------:
 abc                        |abc                        |True
 abc+                       |abcccc                     |True
@@ -114,7 +114,7 @@ abc(a*&#124;d+)            |abdddddddd                 |True
  
 ### False Test Cases
  
-String:                    |  Regular Exp.:            | Status:
+String:                    |  Regular Expression:      | Status:
 :-------------------------:|:-------------------------:|:-------------------------:
 abc                        |abcd                       |False
 abc+                       |ab                         |False
