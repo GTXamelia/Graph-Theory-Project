@@ -71,23 +71,23 @@ go build .\main.go
 
 String:                    |  Regular Exp.:            | Status:
 :-------------------------:|:-------------------------:|:-------------------------:
-abc                        |abc                        |<span style="color: green">True<span>
-abc+                       |abcccc                     |<span style="color: green">True<span>
-abc*                       |abcccc                     |<span style="color: green">True<span>
-abc?                       |ab                         |<span style="color: green">True<span>
-abc&#124;d                 |abc                        |<span style="color: green">True<span>
-abc(a*&#124;d+)            |abdddddddd                 |<span style="color: green">True<span>
+abc                        |abc                        |<p style="color: green">True<p>
+abc+                       |abcccc                     |<p style="color: green">True<p>
+abc*                       |abcccc                     |<p style="color: green">True<p>
+abc?                       |ab                         |<p style="color: green">True<p>
+abc&#124;d                 |abc                        |<p style="color: green">True<p>
+abc(a*&#124;d+)            |abdddddddd                 |<p style="color: green">True<p>
  
 ### False Test Cases
  
 String:                    |  Regular Exp.:            | Status:
 :-------------------------:|:-------------------------:|:-------------------------:
-abc                        |abcd                       |<span style="color: red">False<span>
-abc+                       |ab                         |<span style="color: red">False<span>
-abc*                       |abccccd                    |<span style="color: red">False<span>
-abc?                       |abcd                       |<span style="color: red">False<span>
-abc&#124;d                 |abcd                       |<span style="color: red">False<span>
-abc(a*&#124;d+)            |abddddeeee                 |<span style="color: red">False<span>
+abc                        |abcd                       |<p style="color: red">False<p>
+abc+                       |ab                         |<p style="color: red">False<p>
+abc*                       |abccccd                    |<p style="color: red">False<p>
+abc?                       |abcd                       |<p style="color: red">False<p>
+abc&#124;d                 |abcd                       |<p style="color: red">False<p>
+abc(a*&#124;d+)            |abddddeeee                 |<p style="color: red">False<p>
 
 ### Menu Option 1 Sample
 
