@@ -21,15 +21,12 @@ func ConcatAuto(infix string) string {
 
 		// If character == 0
 		if infixChar == 0 {
+
 			buffer.WriteString(string(Arr[infixChar])) // add character to buffer
-			continue // Continue to next loop iteration
-		}
-		// If character == "." skip
-		if string(Arr[infixChar]) == "." {	
-			continue // Continue to next loop iteration
-		}
-		// If character is one of the 'specials'
-		if specialsCheck(string(Arr[infixChar])) {
+
+		}else if string(Arr[infixChar]) == "." {	
+			
+		}else if specialsCheck(string(Arr[infixChar])) {
 
 			// If character == "|" then check is true this is used later to concatanate or not
 			if !(string(Arr[infixChar]) == "|") {
@@ -39,34 +36,31 @@ func ConcatAuto(infix string) string {
 			}
 
 			buffer.WriteString(string(Arr[infixChar])) // add character to buffer
-			continue // Continue to next loop iteration
-		}
-		// character == "(" and is not the first character of the string
-		if !(infixChar == 0) && string(Arr[infixChar]) == "(" {
+			
+		}else if !(infixChar == 0) && string(Arr[infixChar]) == "(" {
+
 			buffer.WriteString(".") // add to buffer
 			buffer.WriteString(string(Arr[infixChar])) // Add character to buffer// Add character to buffer
-			continue // Continue to next loop iteration
-		}
-		// Checks the previous character == ")"
-		if !(infixChar == 0) && string(Arr[infixChar-1]) == "(" {
-			buffer.WriteString(string(Arr[infixChar])) // add character to buffer
-			continue // Continue to next loop iteration
-		}
-		// If character == ")"
-		if string(Arr[infixChar]) == ")" {
-			buffer.WriteString(string(Arr[infixChar])) // add character to buffer
-			continue // Continue to next loop iteration
-		}
 
-		// If check is true then previous character was "|"
-		if check {
+		}else if !(infixChar == 0) && string(Arr[infixChar-1]) == "(" { // if 
+
+			buffer.WriteString(string(Arr[infixChar])) // add character to buffer
+
+		}else if string(Arr[infixChar]) == ")" {
+
+			buffer.WriteString(string(Arr[infixChar])) // add character to buffer
+
+		}else if check { // check is true if last
+
 			buffer.WriteString(string(Arr[infixChar])) // Add character to buffer
 			check = false
+			
 		}else {
+
 			buffer.WriteString(".") // add to buffer
 			buffer.WriteString(string(Arr[infixChar])) // Add character to buffer
+
 		}
-		continue // Continue to next loop iteration
 	}
 
 	return buffer.String() // Return string
