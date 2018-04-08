@@ -75,7 +75,7 @@ abc                        |abc                        |<span style="color: gree
 abc+                       |abcccc                     |<span style="color: green">True<span>
 abc*                       |abcccc                     |<span style="color: green">True<span>
 abc?                       |ab                         |<span style="color: green">True<span>
-abc|d                      |abc                        |<span style="color: green">True<span>
+abcd                       |abc                        |<span style="color: green">True<span>
 abc(a*|d+)                 |abdddddddd                 |<span style="color: green">True<span>
  
 ### False Test Cases
@@ -86,7 +86,7 @@ abc                        |abcd                       |<span style="color: red"
 abc+                       |ab                         |<span style="color: red">False<span>
 abc*                       |abccccd                    |<span style="color: red">False<span>
 abc?                       |abcd                       |<span style="color: red">False<span>
-abc|d                      |abcd                       |<span style="color: red">False<span>
+abc&#124;d                      |abcd                       |<span style="color: red">False<span>
 abc(a*|d+)                 |abddddeeee                 |<span style="color: red">False<span>
 
 ### Menu Option 1 Sample
