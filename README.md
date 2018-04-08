@@ -82,12 +82,12 @@ String:                    |  Regular Exp.:            | Status:
  
 String:                    |  Regular Exp.:            | Status:
 :-------------------------:|:-------------------------:|:-------------------------:
-!abc                        !abcd                       !<span style="color: red">False<span>
-!abc+                       !ab                         !<span style="color: red">False<span>
-!abc*                       !abccccd                    !<span style="color: red">False<span>
-!abc?                       !abcd                       !<span style="color: red">False<span>
-!abc|d                      !abcd                       !<span style="color: red">False<span>
-!abc(a*|d+)                 !abddddeeee                 !<span style="color: red">False<span>
+!abc                       |!abcd                      |!<span style="color: red">False<span>
+!abc+                      |!ab                       |!<span style="color: red">False<span>
+!abc*                      |!abccccd                  |!<span style="color: red">False<span>
+!abc?                      |!abcd                     |!<span style="color: red">False<span>
+!abc|d                     |!abcd                     |!<span style="color: red">False<span>
+!abc(a*|d+)                |!abddddeeee               |!<span style="color: red">False<span>
 
 ### Menu Option 1 Sample
 
