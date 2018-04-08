@@ -24,6 +24,38 @@ The project takes a regular expression and compares it to a string of text.
   * [Authors](#authors)
   * [License](#license)
   * [Acknowledgments](#acknowledgments)
+  
+## Features
+1. Evaluate a string using a regular expression
+
+Allow the user to evaluate a string using a regular expression.
+
+Example:
+```
+Regular Expression: ab+ ---> String abbbbbbb ---> True
+Regular Expression: ab+ ---> String accccccc ---> False
+```
+
+2. Evaluate a txt file contents using a regular expression
+
+The user can select a txt file in the same directory that the launcher is in.
+The user just enters the file name not file extenstion, as the program will append that to the file name.
+
+Example: 
+```
+File: testingFile.txt ----> User enters: testingFile
+```
+
+3. No need to concatanate regular expression (Can still concatanate without any problems)
+
+The user doesn't need to concatanate a regular expression (although they still can)
+
+Example: 
+```
+Regular Expression: abc   ---> String abc ---> True
+Regular Expression: a.b.c ---> String abc ---> False
+```
+
 
 ## Getting Started
 
