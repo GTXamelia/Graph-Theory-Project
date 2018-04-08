@@ -71,23 +71,23 @@ go build .\main.go
 
 String:                    |  Regular Exp.:            | Status:
 :-------------------------:|:-------------------------:|:-------------------------:
-abc                        |abc                        |<p style="color: green">True<p>
-abc+                       |abcccc                     |<p style="color: green">True<p>
-abc*                       |abcccc                     |<p style="color: green">True<p>
-abc?                       |ab                         |<p style="color: green">True<p>
-abc&#124;d                 |abc                        |<p style="color: green">True<p>
-abc(a*&#124;d+)            |abdddddddd                 |<p style="color: green">True<p>
+abc                        |abc                        |True
+abc+                       |abcccc                     |True
+abc*                       |abcccc                     |True
+abc?                       |ab                         |True
+abc&#124;d                 |abc                        |True
+abc(a*&#124;d+)            |abdddddddd                 |True
  
 ### False Test Cases
  
 String:                    |  Regular Exp.:            | Status:
 :-------------------------:|:-------------------------:|:-------------------------:
-abc                        |abcd                       |<p style="color: red">False<p>
-abc+                       |ab                         |<p style="color: red">False<p>
-abc*                       |abccccd                    |<p style="color: red">False<p>
-abc?                       |abcd                       |<p style="color: red">False<p>
-abc&#124;d                 |abcd                       |<p style="color: red">False<p>
-abc(a*&#124;d+)            |abddddeeee                 |<p style="color: red">False<p>
+abc                        |abcd                       |False
+abc+                       |ab                         |False
+abc*                       |abccccd                    |False
+abc?                       |abcd                       |False
+abc&#124;d                 |abcd                       |False
+abc(a*&#124;d+)            |abddddeeee                 |False
 
 ### Menu Option 1 Sample
 
