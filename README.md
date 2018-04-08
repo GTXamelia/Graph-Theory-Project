@@ -1,4 +1,5 @@
-# Graph Theory Project
+<a href="https://imgur.com/hEruUSM"><img src="https://imgur.com/hEruUSM.png" height="75" width="450" title="NFA Project Header"/></a>
+
 
 The project takes a regular expression and compares it to a string of text.
 
