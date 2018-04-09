@@ -55,7 +55,7 @@ The user doesn't need to concatanate a regular expression (although they still c
 Example: 
 ```
 Regular Expression: abc   ---> String abc ---> True
-Regular Expression: a.b.c ---> String abc ---> False
+Regular Expression: a.b.c ---> String abc ---> True
 ```
 
 
@@ -105,7 +105,7 @@ go build .\main.go
 
 ### True Test Cases
 
-String:                    |  Regular Expression:      | Status:
+Regular Expression:        |  String:                  | Status:
 :-------------------------:|:-------------------------:|:-------------------------:
 abc                        |abc                        |True
 abc+                       |abcccc                     |True
@@ -116,7 +116,7 @@ abc(a*&#124;d+)            |abdddddddd                 |True
  
 ### False Test Cases
  
-String:                    |  Regular Expression:      | Status:
+Regular Expression:        |  String:                  | Status:
 :-------------------------:|:-------------------------:|:-------------------------:
 abc                        |abcd                       |False
 abc+                       |ab                         |False
